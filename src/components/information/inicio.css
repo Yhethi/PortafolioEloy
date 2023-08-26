@@ -1,0 +1,564 @@
+.paisajeInicio {
+  position: absolute;
+  /* background: red; */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.gardens {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gardenBottom {
+  width: 30% !important;
+  height: 300px !important;
+  position: relative;
+  animation: moveGarden 40s linear infinite;
+  bottom: -60px;
+}
+@keyframes moveGarden {
+  0%,
+  100% {
+    transform: matrix(1.2, 0.2, 0.5, 0.9, 0, 20);
+  }
+  50% {
+    transform: matrix(1.2, 0.2, -0.5, 0.9, 0, 20);
+  }
+}
+
+.gardenBottom2 {
+  width: 30% !important;
+  height: 300px !important;
+  position: relative;
+  transform: rotateY(180deg);
+  animation: moveGarden2 40s linear infinite;
+  bottom: -60px;
+}
+@keyframes moveGarden2 {
+  0%,
+  100% {
+    transform: rotateY(180deg) matrix(1.2, 0.2, 0.5, 0.9, 0, 20);
+  }
+  50% {
+    transform: rotateY(180deg) matrix(1.2, 0.2, -0.5, 0.9, 0, 20);
+  }
+}
+.palmas {
+  position: absolute;
+  width: 40%;
+  right: 0;
+}
+
+.palmasMove {
+  animation: palmasMove 60s linear infinite;
+}
+@keyframes palmasMove {
+  0%,
+  100% {
+    transform: matrix(1, 0, 0.5, 1, 60, -90);
+  }
+  50% {
+    transform: matrix(1, 0, -0.5, 1, 60, -90);
+  }
+}
+
+.contenedor_white {
+  width: 80%;
+  height: 700px;
+  position: relative;
+  top: 85px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.315);
+  /* display: grid;
+  grid-template-columns: 3;
+  grid-template-rows: 2; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  transition-duration: 2s;
+  /* transform: scale(0); */
+}
+
+.squareInicio {
+  background: rgba(0, 0, 0, 0.548);
+  color: white;
+  border-radius: 5px;
+  transform: scale(0);
+  transition-duration: 2s;
+}
+
+.inicio1y2 {
+  width: 100%;
+  position: relative;
+  height: 50%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 10px;
+}
+
+.inicio3y4y5 {
+  width: 100%;
+  position: relative;
+  height: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+#inicio1 {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  perspective-origin: 0 200px;
+  perspective: 700px;
+  top: 0px;
+  left: 0px;
+}
+
+.fotoPerfil {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+.fotoPerfil img {
+  position: absolute;
+  width: 250px !important;
+  height: 250px !important;
+  object-fit: cover;
+  border-radius: 100%;
+  animation: girar 10s infinite linear;
+  z-index: 2;
+}
+
+.orbe {
+  background: white;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.orbe1 {
+  width: 25px;
+  height: 25px;
+  margin-left: -350px;
+  margin-top: -100px;
+  position: absolute;
+  animation: subirBubble 7s linear infinite;
+}
+.orbe2 {
+  width: 50px;
+  height: 50px;
+  margin-left: 350px;
+  margin-top: 100px;
+  position: absolute;
+  animation: subirBubble 9s linear infinite;
+}
+
+@keyframes subirBubble {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+}
+
+.infoPerfil {
+  width: 50%;
+  /* display: grid;
+  place-content: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.infoPerfil h1 {
+  background: black;
+  position: absolute;
+  width: 40%;
+  height: 0%;
+  font-size: 2.5em;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 0 100%;
+  display: grid;
+  place-content: center;
+  animation: agujeroNegro 6s ease-out;
+  animation-delay: 2s;
+  background-image: url("./../../assets/img/elements/nieblaVVerde.png");
+  background-size: 100%;
+  border: 2px solid white;
+}
+
+.agujeroOpen {
+  height: 60% !important;
+  animation: subirNiebla 60s linear infinite !important;
+}
+
+@keyframes agujeroNegro {
+  0% {
+    height: 0%;
+  }
+  20% {
+    height: 60%;
+  }
+  100% {
+    height: 60%;
+  }
+}
+
+#inicio2 {
+  width: 100%;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#inicio2 h1 {
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 1.4rem;
+  /* margin: 0 auto; */
+  font-family: "Courier New";
+  border-right: 0.15em solid #18ec4d;
+  animation: typing 4s steps(44) 1s 1 normal both, blink 1s steps(1) infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 95%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+#inicio2 p {
+  font-size: 1.2rem;
+}
+
+#inicio2 a {
+  text-decoration: none;
+  color: white;
+  background: black;
+  border: 1px solid greenyellow;
+  padding: 10px 20px;
+  border-radius: 50px 0 50px 0;
+  transition-duration: 0.3s;
+}
+#inicio2 a:hover {
+  border: 3px solid greenyellow;
+  transform: scale(1.1);
+}
+
+.codeImgs {
+  display: flex;
+  gap: 50px;
+}
+
+.codeImgs img {
+  position: relative;
+  width: auto !important;
+  height: 70px !important;
+  object-fit: cover;
+}
+
+#inicio3,
+#inicio4,
+#inicio5 {
+  width: 100%;
+  /* height: 100%; */
+}
+
+@media (max-width: 1544px) {
+  .fotoPerfil {
+    width: 100% !important;
+    height: 300px !important;
+  }
+  .infoPerfil {
+    width: 100%;
+
+    height: 300px;
+  }
+  .agujeroOpen {
+    height: 40% !important;
+  }
+  @keyframes agujeroNegro {
+    0% {
+      height: 0%;
+    }
+    20% {
+      height: 40%;
+    }
+    100% {
+      height: 40%;
+    }
+  }
+  #inicio1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 600px;
+  }
+  #inicio2 {
+    font-size: 1.2rem;
+    height: 50%;
+    padding: 30px 0;
+  }
+  .contenedor_white {
+    position: relative;
+    width: 90vw;
+    height: auto !important;
+    gap: 10px;
+    top: 85px;
+    overflow-y: scroll;
+    margin-bottom: 100px;
+  }
+
+  .inicio1y2 {
+    width: 100% !important;
+    position: relative;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 10px;
+  }
+
+  .inicio3y4y5 {
+    position: relative;
+    display: flex;
+    background: red;
+    height: 100% !important;
+    flex-direction: column;
+  }
+  .fotoPerfil {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+  }
+
+  .fotoPerfil img {
+    position: absolute;
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: cover;
+    border-radius: 100%;
+    animation: girar 10s infinite linear;
+    z-index: 2;
+  }
+  .orbe {
+    background: white;
+    border-radius: 100%;
+    z-index: 1;
+  }
+
+  .orbe1 {
+    width: 25px;
+    height: 25px;
+    margin-left: -200px;
+    margin-top: -100px;
+    position: absolute;
+    animation: subirBubble 7s linear infinite;
+  }
+  .orbe2 {
+    width: 50px;
+    height: 50px;
+    margin-left: 250px;
+    margin-top: 100px;
+    position: absolute;
+    animation: subirBubble 9s linear infinite;
+  }
+
+  /* .squareInicio {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  } */
+}
+@media (max-width: 1544px) {
+  .inicio1y2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #inicio1,
+  #inicio2 {
+    width: 100% !important;
+  }
+  #inicio2 h1 {
+    font-size: 100%;
+    top: 10px;
+    white-space: pre-wrap;
+  }
+  .codeImgs {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+#inicio3 {
+  background-image: env(
+    VITE_APP_API_URL,
+    url("../../assets/img/inicio/bosqueAmarillo.jpeg")
+  );
+  background-size: 100%;
+  animation: moveForest 60s linear infinite;
+}
+
+@keyframes moveForest {
+  100%,
+  0% {
+    background-position: 0px 0;
+  }
+  33% {
+    background-position: 50px 0;
+  }
+  66% {
+    background-position: -50px 0;
+  }
+}
+
+.petalosCayendo {
+  background-image: env(
+    VITE_APP_API_URL,
+    url("../../assets/img/inicio/petalosA.png")
+  );
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: petalosCayendo 20s linear infinite;
+}
+
+@keyframes petalosCayendo {
+  0% {
+    background-position: 0px 0px;
+  }
+
+  100% {
+    background-position: 0px 1000px;
+  }
+}
+
+#inicio3 h1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+}
+@media (max-width: 1544px) {
+  #inicio3 {
+    height: 50%;
+  }
+}
+
+#textforest {
+  transition-duration: 2s;
+}
+#inicio4 {
+  overflow: hidden;
+  background: linear-gradient(to right, rgb(0, 162, 255), rgb(121, 246, 255));
+}
+#inicio4:hover {
+  cursor: none;
+}
+
+.nubesGame {
+  background-image: env(
+    VITE_APP_API_URL,
+    url("../../assets/img/inicio/nubesV.png")
+  );
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: nubesGame 15s linear infinite;
+}
+
+@keyframes nubesGame {
+  0% {
+    background-position: 0px 0px;
+  }
+
+  100% {
+    background-position: -500px 0px;
+  }
+}
+
+.cespedGame {
+  background-image: env(
+    VITE_APP_API_URL,
+    url("../../assets/img/inicio/cespedV.png")
+  );
+  background-size: 100%;
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  animation: cespedGame 10s linear infinite;
+  transform: translateY(-100px);
+  z-index: 1;
+}
+
+.playerGame {
+  /* background-image: env(
+    VITE_APP_API_URL,
+    url("../../assets/img/inicio/cohete.png")
+  );
+  object-fit: contain; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  padding-left: 20px;
+  align-items: start;
+  justify-content: start;
+  /* background: red; */
+  z-index: 1;
+}
+
+#cohete {
+  top: 0;
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+}
+
+@keyframes cespedGame {
+  0% {
+    background-position: 0px 0px;
+  }
+
+  100% {
+    background-position: -500px 0px;
+  }
+}

@@ -1,0 +1,2 @@
+v1.00
+Primera version del sistema con la estructura ya realizada y el componente de inicio

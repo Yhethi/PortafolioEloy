@@ -1,0 +1,122 @@
+.content_header {
+  width: 100%;
+  background: rgba(5, 0, 0, 0.555);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 20px;
+  position: absolute;
+  z-index: 1;
+  border-bottom: 1px solid gray;
+  color: white;
+  border-radius: 0 0 15px 15px;
+}
+
+.content_header .center u {
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+}
+
+.content_header .center u li {
+  list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.377);
+  height: 40px;
+  display: grid;
+  place-content: center;
+  filter: opacity(0.9);
+  transition-duration: 0.5s;
+}
+
+.content_header .center u li:hover {
+  filter: opacity(1);
+  transform: scale(1.05);
+  background-size: 100%;
+  animation: subirNiebla 60s linear infinite;
+}
+
+.content_header .center u li:hover:nth-child(1) {
+  background-image: env(
+    VITE_APP_API_URL,
+    url("./../assets/img/elements/nieblaVVerde.png")
+  );
+}
+
+.content_header .center u li:hover:nth-child(2) {
+  background-image: env(
+    VITE_APP_API_URL,
+    url("./../assets/img/elements/nieblaVRoja.png")
+  );
+}
+
+.content_header .center u li:hover:nth-child(3) {
+  background-image: env(
+    VITE_APP_API_URL,
+    url("./../assets/img/elements/nieblaVAzul.png")
+  );
+}
+.content_header .center u li:hover:nth-child(4) {
+  background-image: env(
+    VITE_APP_API_URL,
+    url("./../assets/img/elements/nieblaVBlanca.png")
+  );
+}
+
+@keyframes subirNiebla {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 0px -1400px;
+  }
+}
+
+.content_header .center u li a {
+  /* position: absolute; */
+  /* background: red; */
+  display: block;
+  color: white;
+  text-decoration: none;
+  height: 90% !important;
+  padding: 20px 10px;
+}
+
+#bInicio {
+}
+
+#closeButtonMenu {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #1e1e1e;
+  top: 5%;
+  right: -50px;
+  border-radius: 0px 10px 10px 0;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition-duration: 0.1s;
+  transform: scale(0);
+}
+#closeButtonMenu:hover {
+  background: #414040;
+}
+
+@media (max-width: 777px) {
+  .content_header .center u {
+    height: 100vh;
+    left: -145px;
+    top: 0;
+    position: absolute;
+    background: #1e1e1e;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-decoration: none;
+    padding: 10px;
+    transition-duration: 0.5s;
+  }
+  #closeButtonMenu {
+    transform: scale(1);
+  }
+}

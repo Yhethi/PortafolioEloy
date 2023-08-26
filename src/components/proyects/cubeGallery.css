@@ -1,0 +1,130 @@
+.cubeCenter {
+  width: 0%;
+  height: 0%;
+  display: flex;
+  justify-content: center;
+  padding-top: 400px;
+  position: absolute;
+  background: #1e1e1ee5;
+  transition-duration: 0.5s;
+  transform: scale(0);
+}
+
+.content_cubeGallery {
+  perspective: 700px;
+  perspective-origin: 0 -200px;
+  /* transform: translateX(-200px); */
+  transition-duration: 1s;
+}
+
+.imgPreview {
+  width: 0%;
+  height: 0px;
+  position: relative;
+  /* position: absolute; */
+  top: 0;
+  z-index: 3;
+  transition-duration: 1s;
+  transform: scale(0) translateX(200px) translateY(-170px);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.onlyCubeGallery {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.imgPreview img {
+  width: 100%;
+  height: 100% !important;
+  object-fit: contain;
+  animation: moveImg 5s infinite linear;
+}
+@keyframes moveImg {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+  }
+  33% {
+    transform: rotate(1deg) translateY(-5px);
+  }
+  66% {
+    transform: rotate(-1deg) translateY(5px);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0px);
+  }
+}
+
+.subidaCube {
+  animation: subidaCube 5s infinite linear;
+}
+
+@keyframes subidaCube {
+  0% {
+    transform: rotateY(0deg) scale(0) translateY(-500px);
+  }
+  25% {
+    transform: rotateY(0deg) scale(1) translateY(-100px);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.girar {
+  animation: girar 5s infinite linear;
+}
+
+@keyframes girar {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.cara {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#uno {
+  background: white;
+  transform: translateZ(-100px);
+}
+
+#dos {
+  background: yellow;
+  transform: translateX(-100px) rotateY(90deg);
+}
+
+#tres {
+  background: blue;
+  transform: translateX(100px) rotateY(90deg);
+}
+
+#cuatro {
+  background: rgb(41, 37, 40);
+  transform: translateZ(100px);
+}
+
+#cinco {
+  background: rgb(255, 0, 234);
+  transform: translateY(-100px) rotateX(90deg);
+}
+
+#seis {
+  background: rgb(0, 255, 30);
+  transform: translateY(100px) rotateX(90deg);
+}
+
+.cara img {
+  width: 100%;
+  height: 100%;
+}
