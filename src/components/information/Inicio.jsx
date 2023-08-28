@@ -1,5 +1,14 @@
 import React, { useEffect } from "react";
 import "./inicio.css";
+import cohete from "../../assets/img/inicio/cohete.png";
+import garden from "../../assets/img/elements/garden.png";
+import palmas from "../../assets/img/elements/palmas.png";
+import paisajeInicio from "../../assets/img/elements/paisajeInicio.jpg";
+import fotoPerfil from "../../assets/img/inicio/fotoPerfil.png";
+import react from "../../assets/img/inicio/react.png";
+import php from "../../assets/img/inicio/php.png";
+import js from "../../assets/img/inicio/js.png";
+import laravel from "../../assets/img/inicio/laravel.png";
 
 const Inicio = ({ setChangeData }) => {
   useEffect(() => {
@@ -45,6 +54,7 @@ const Inicio = ({ setChangeData }) => {
   const animarCohete = () => {
     const inicio4 = document.getElementById("inicio4");
     const cohete = document.getElementById("cohete");
+    const shot = document.getElementById("shot");
     inicio4.addEventListener("mousemove", ({ clientX, clientY }) => {
       // ,{ clientX, clientY }
       const medidasCuadro = inicio4.getBoundingClientRect();
@@ -52,7 +62,18 @@ const Inicio = ({ setChangeData }) => {
       // console.log(clientX - 690, clientY - 468);
       console.log((clientY * 100) / medidasCuadro.y - 99);
       let altura = (clientY * 100) / medidasCuadro.y - 99;
+      let altura2 = (clientY * 100) / medidasCuadro.y - 100;
+
       cohete.style.top = `${altura}%`;
+      shot.style.top = `${altura2}%`;
+    });
+    inicio4.addEventListener("click", () => {
+      shot.classList.remove("shot");
+      shot.classList.add("shotNow");
+      setTimeout(() => {
+        shot.classList.remove("shotNow");
+        shot.classList.add("shot");
+      }, 500);
     });
   };
 
@@ -64,52 +85,13 @@ const Inicio = ({ setChangeData }) => {
     <div className="cara" id="cara1">
       <div className="paisajeInicio">
         <div className="gardens">
-          <img
-            className="gardenBottom"
-            src={
-              import.meta.env.VITE_APP_API_URL +
-              "/src/assets/img/elements/garden.png"
-            }
-            alt={
-              import.meta.env.VITE_APP_API_URL +
-              "/src/assets/img/elements/garden.png"
-            }
-          />
-          <img
-            className="gardenBottom2"
-            src={
-              import.meta.env.VITE_APP_API_URL +
-              "/src/assets/img/elements/garden.png"
-            }
-            alt={
-              import.meta.env.VITE_APP_API_URL +
-              "/src/assets/img/elements/garden.png"
-            }
-          />
+          <img className="gardenBottom" src={garden} alt={garden} />
+          <img className="gardenBottom2" src={garden} alt={garden} />
         </div>
         <div className="palmas">
-          <img
-            className="palmasMove"
-            src={
-              import.meta.env.VITE_APP_API_URL +
-              "/src/assets/img/elements/palmas.png"
-            }
-            alt={
-              import.meta.env.VITE_APP_API_URL +
-              "/src/assets/img/elements/palmas.png"
-            }
-          />
+          <img className="palmasMove" src={palmas} alt={palmas} />
         </div>
-        <img
-          src={
-            import.meta.env.VITE_APP_API_URL +
-            "/src/assets/img/elements/paisajeInicio.jpg"
-          }
-          alt={
-            import.meta.env.VITE_APP_API_URL +
-            "/src/assets/img/elements/paisajeInicio.jpg"
-          }
-        />
+        <img src={paisajeInicio} alt={paisajeInicio} />
       </div>
       <div className="contenedor_white">
         <div className="inicio1y2">
@@ -118,16 +100,7 @@ const Inicio = ({ setChangeData }) => {
               <div className="orbe orbe1"></div>
               <div className="orbe orbe2"></div>
 
-              <img
-                src={
-                  import.meta.env.VITE_APP_API_URL +
-                  "/src/assets/img/inicio/fotoPerfil.png"
-                }
-                alt={
-                  import.meta.env.VITE_APP_API_URL +
-                  "/src/assets/img/inicio/fotoPerfil.png"
-                }
-              />
+              <img src={fotoPerfil} alt={fotoPerfil} />
             </div>
             <div className="infoPerfil">
               <h1 id="agujeroNegro">
@@ -148,53 +121,13 @@ const Inicio = ({ setChangeData }) => {
               SOBRE MI
             </a>
             <div className="codeImgs">
-              <img
-                id="react"
-                src={
-                  import.meta.env.VITE_APP_API_URL +
-                  "/src/assets/img/inicio/react.png"
-                }
-                alt={
-                  import.meta.env.VITE_APP_API_URL +
-                  "/src/assets/img/inicio/react.png"
-                }
-              />
+              <img id="react" src={react} alt={react} />
 
-              <img
-                id="js"
-                src={
-                  import.meta.env.VITE_APP_API_URL +
-                  "/src/assets/img/inicio/js.png"
-                }
-                alt={
-                  import.meta.env.VITE_APP_API_URL +
-                  "/src/assets/img/inicio/js.png"
-                }
-              />
+              <img id="js" src={js} alt={js} />
 
-              <img
-                id="laravel"
-                src={
-                  import.meta.env.VITE_APP_API_URL +
-                  "/src/assets/img/inicio/laravel.png"
-                }
-                alt={
-                  import.meta.env.VITE_APP_API_URL +
-                  "/src/assets/img/inicio/laravel.png"
-                }
-              />
+              <img id="laravel" src={laravel} alt={laravel} />
 
-              <img
-                id="php"
-                src={
-                  import.meta.env.VITE_APP_API_URL +
-                  "/src/assets/img/inicio/php.png"
-                }
-                alt={
-                  import.meta.env.VITE_APP_API_URL +
-                  "/src/assets/img/inicio/php.png"
-                }
-              />
+              <img id="php" src={php} alt={php} />
             </div>
           </div>
         </div>
@@ -207,22 +140,13 @@ const Inicio = ({ setChangeData }) => {
             <div className="nubesGame"></div>
             <div className="cespedGame"></div>
             <div className="playerGame">
-              <img
-                id="cohete"
-                src={
-                  import.meta.env.VITE_APP_API_URL +
-                  "/src/assets/img/inicio/cohete.png"
-                }
-                alt={
-                  import.meta.env.VITE_APP_API_URL +
-                  "/src/assets/img/inicio/cohete.png"
-                }
-              />
+              <img id="cohete" src={cohete} alt={cohete} />
+              <div className="playerShot">
+                <div id="shot" className="shot"></div>
+              </div>
             </div>
           </div>
-          <div className="squareInicio" id="inicio5">
-            5
-          </div>
+          <div className="squareInicio" id="inicio5"></div>
         </div>
       </div>
     </div>

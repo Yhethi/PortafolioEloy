@@ -1,2 +1,5 @@
+v1.01
+Cambiando la importacion de imagenes
+
 v1.00
 Primera version del sistema con la estructura ya realizada y el componente de inicio
