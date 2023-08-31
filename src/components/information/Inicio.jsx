@@ -4,6 +4,9 @@ import cohete from "../../assets/img/inicio/cohete.png";
 import garden from "../../assets/img/elements/garden.png";
 import palmas from "../../assets/img/elements/palmas.png";
 import paisajeInicio from "../../assets/img/elements/paisajeInicio.jpg";
+import palmaIz from "../../assets/img/elements/palmaIz.png";
+import palmaDe from "../../assets/img/elements/palmaDe.png";
+import hojaPalma from "../../assets/img/elements/hojaPalma.png";
 import fotoPerfil from "../../assets/img/inicio/fotoPerfil.png";
 import react from "../../assets/img/inicio/react.png";
 import php from "../../assets/img/inicio/php.png";
@@ -146,7 +149,33 @@ const Inicio = ({ setChangeData }) => {
               </div>
             </div>
           </div>
-          <div className="squareInicio" id="inicio5"></div>
+          <div className="squareInicio" id="inicio5">
+            <img id="palmaIz" src={palmaIz} alt={palmaIz} />
+            <img id="palmaDe" src={palmaDe} alt={palmaDe} />
+            <img id="hojaPalma" src={hojaPalma} alt={hojaPalma} />
+            <img id="hojaPalma2" src={hojaPalma} alt={hojaPalma} />
+
+            <div className="botonesToGo">
+              <a
+                id="bProyects"
+                href="#proyects"
+                onClick={() => {
+                  setChangeData(2);
+                }}
+              >
+                PROYECTS
+              </a>
+              <a
+                id="bContactme"
+                href="#contactme"
+                onClick={() => {
+                  setChangeData(3);
+                }}
+              >
+                CONTACT ME
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

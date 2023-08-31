@@ -1,3 +1,6 @@
+v1.03
+Inicio completado
+
 v1.02
 fixing imagenes de la galeria
 

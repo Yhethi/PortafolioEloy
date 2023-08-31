@@ -35,27 +35,27 @@
   animation: subirNiebla 60s linear infinite;
 }
 
-.content_header .center u li:hover:nth-child(1) {
+.content_header .center u li:hover:nth-child(2) {
   background-image: env(
     VITE_APP_API_URL,
     url("./../assets/img/elements/nieblaVVerde.png")
   );
 }
 
-.content_header .center u li:hover:nth-child(2) {
+.content_header .center u li:hover:nth-child(3) {
   background-image: env(
     VITE_APP_API_URL,
     url("./../assets/img/elements/nieblaVRoja.png")
   );
 }
 
-.content_header .center u li:hover:nth-child(3) {
+.content_header .center u li:hover:nth-child(4) {
   background-image: env(
     VITE_APP_API_URL,
     url("./../assets/img/elements/nieblaVAzul.png")
   );
 }
-.content_header .center u li:hover:nth-child(4) {
+.content_header .center u li:hover:nth-child(5) {
   background-image: env(
     VITE_APP_API_URL,
     url("./../assets/img/elements/nieblaVBlanca.png")
@@ -119,4 +119,8 @@
   #closeButtonMenu {
     transform: scale(1);
   }
+}
+
+.logo h1 {
+  font-size: 1.3rem;
 }

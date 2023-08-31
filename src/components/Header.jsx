@@ -7,7 +7,7 @@ const Header = ({ setChangeData, openMenu, isOpen }) => {
     <div className="content_header">
       <div className="left">
         <div className="logo">
-          <h1>LOGO</h1>
+          <h1>PORTAFOLIO</h1>
         </div>
       </div>
       <div className="center">

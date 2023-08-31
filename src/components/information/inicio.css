@@ -477,7 +477,9 @@
 }
 @media (max-width: 1544px) {
   #inicio3,
-  #inicio4 {
+  #inicio4,
+  #inicio5
+   {
     height: 50%;
   }
 }
@@ -610,5 +612,99 @@
 
   100% {
     background-position: -500px 0px;
+  }
+}
+
+#inicio5 {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+#palmaIz {
+  width: 38%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -10%;
+  animation: palmasMove1 60s linear infinite;
+}
+
+#palmaDe {
+  width: 38%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: -10%;
+  animation: palmasMove2 60s linear infinite;
+}
+#hojaPalma {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition-duration: 0.5s;
+  z-index: 1;
+}
+#hojaPalma2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: rotateY(180deg);
+  transition-duration: 0.5s;
+  z-index: 1;
+}
+#inicio5:hover > #hojaPalma {
+  transform-origin: bottom;
+  transform: rotate(-90deg);
+}
+#inicio5:hover > #hojaPalma2 {
+  transform-origin: bottom;
+  transform: rotateY(180deg) rotate(-90deg);
+}
+
+.botonesToGo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition-duration: 0.3s;
+  z-index: 0;
+}
+#inicio5:hover > .botonesToGo {
+  z-index: 2;
+}
+.botonesToGo a {
+  text-decoration: none;
+  color: white;
+  background: black;
+  border: 1px solid greenyellow;
+  padding: 10px 20px;
+  border-radius: 50px 0 50px 0;
+  transition-duration: 0.3s;
+}
+.botonesToGo a:hover {
+  border: 3px solid greenyellow;
+  transform: scale(1.1);
+}
+
+@keyframes palmasMove1 {
+  0%,
+  100% {
+    transform: translateX(-50px) matrix(1, 0, 0.5, 1, 60, -90);
+  }
+  50% {
+    transform: translateX(-50px) matrix(1, 0, -0.5, 1, 60, -90);
+  }
+}
+@keyframes palmasMove2 {
+  0%,
+  100% {
+    transform: translateX(-50px) matrix(1, 0, 0.5, 1, 60, -90);
+  }
+  50% {
+    transform: translateX(-50px) matrix(1, 0, -0.5, 1, 60, -90);
   }
 }
