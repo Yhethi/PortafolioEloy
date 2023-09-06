@@ -1,3 +1,6 @@
+v1.06
+Bug fixed scroll en todas las pantallas y en varias que no dejaban hacerlo en mobile
+
 v1.05
 Sobre mi, proyectos añadidos y la parte de contacto, primera version completa de la pagina lista
 

@@ -221,16 +221,22 @@ p {
 
 @media (max-width: 1300px) {
   #cara2 {
-    width: 100% !important;
+    width: 110vw !important;
+    height: 100vh !important;
+    overflow-x: hidden !important;
+    z-index: 1;
   }
   .contenedor_white_about {
-    width: 100vw;
-    height: 90vh;
-    overflow-x: hidden;
+    width: 100% !important;
+    height: 100vh !important;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
   .upAbout {
     width: 100vw;
     height: 30%;
+    overflow-y: visible;
   }
   .elements2 img {
     width: 150px !important;
@@ -241,6 +247,7 @@ p {
 @media (max-width: 732px) {
   .squareAbout {
     width: 85%;
+    height: 450px;
   }
 }
 

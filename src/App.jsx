@@ -105,14 +105,26 @@ function App() {
 
   useEffect(() => {
     const cubo = document.getElementById("cubo");
+    const cara1 = document.getElementById("cara1");
+    const cara2 = document.getElementById("cara2");
+    const cara3 = document.getElementById("cara3");
+    const cara4 = document.getElementById("cara4");
 
     if (changeData == 0) {
       cubo.style.transform = "rotateY(-180deg)";
+      cara1.style.zIndex = "1";
+      cara2.style.zIndex = "0";
+      cara3.style.zIndex = "0";
+      cara4.style.zIndex = "0";
       enableSquareInicio();
       disableSquareAbout();
       disableSquareProyects();
     } else if (changeData == 1) {
       cubo.style.transform = "rotateY(-270deg)";
+      cara1.style.zIndex = "0";
+      cara2.style.zIndex = "1";
+      cara3.style.zIndex = "0";
+      cara4.style.zIndex = "0";
       disableSquareInicio();
       enableSquareAbout();
       disableSquareProyects();
@@ -123,10 +135,18 @@ function App() {
         enableSquareProyects();
       }
       cubo.style.transform = "rotateY(-360deg)";
+      cara1.style.zIndex = "0";
+      cara2.style.zIndex = "0";
+      cara3.style.zIndex = "1";
+      cara4.style.zIndex = "0";
       disableSquareInicio();
       disableSquareAbout();
     } else if (changeData == 3) {
       cubo.style.transform = "rotateY(-450deg)";
+      cara1.style.zIndex = "0";
+      cara2.style.zIndex = "0";
+      cara3.style.zIndex = "0";
+      cara4.style.zIndex = "1";
       disableSquareInicio();
       disableSquareAbout();
       disableSquareProyects();

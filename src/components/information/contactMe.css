@@ -33,6 +33,7 @@
   #cara4 {
     width: 110% !important;
     padding-left: 7%;
+    z-index: 0;
   }
   .socialContact {
     width: 100% !important;
