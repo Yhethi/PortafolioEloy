@@ -113,7 +113,12 @@ const Gallery = ({ dataGallery }) => {
           "scale(1) translateX(200px) translateY(-170px)";
         imgPreview.style.width = "50%";
         imgPreview.style.height = "500px";
-        setTitleImg(e.title);
+
+        animacion.map((item, key) => {
+          if (item.src === e) {
+            setTitleImg(item.title);
+          }
+        });
         setImgView(e);
       }, 100);
     } else {
@@ -149,7 +154,7 @@ const Gallery = ({ dataGallery }) => {
     },
     {
       id: 2,
-      title: "text2",
+      title: "https://dashboard-store-v1.vercel.app/",
       face1: p2Img1,
       face2: p2Img2,
       face3: p2Img2,
@@ -158,7 +163,7 @@ const Gallery = ({ dataGallery }) => {
     },
     {
       id: 3,
-      title: "",
+      title: "https://react-redux-ruby.vercel.app/",
       face1: p3Img2,
       face2: p3Img3,
       face3: p3Img1,
@@ -167,7 +172,7 @@ const Gallery = ({ dataGallery }) => {
     },
     {
       id: 4,
-      title: "",
+      title: "https://gif-expert-app-fawn.vercel.app/",
       face1: p4Img1,
       face2: p4Img2,
       face3: p4Img3,
@@ -176,7 +181,7 @@ const Gallery = ({ dataGallery }) => {
     },
     {
       id: 5,
-      title: "",
+      title: "https://fullcarsca.000webhostapp.com/",
       face1: p5Img1,
       face2: p5Img5,
       face3: p5Img3,
@@ -185,7 +190,7 @@ const Gallery = ({ dataGallery }) => {
     },
     {
       id: 6,
-      title: "",
+      title: "https://ponencias-rubik-cube.vercel.app/",
       face1: p6Img1,
       face2: p6Img2,
       face3: p6Img2,
@@ -194,7 +199,7 @@ const Gallery = ({ dataGallery }) => {
     },
     {
       id: 7,
-      title: "",
+      title: "https://github.com/Yhethi/pdgroup",
       face1: p7Img1,
       face2: p7Img2,
       face3: p7Img3,
@@ -250,7 +255,7 @@ const Gallery = ({ dataGallery }) => {
   const [animacion, setAnimacion] = useState([
     {
       id: 1,
-      title: "",
+      title: "https://kunaisoft-kunais.vercel.app/",
       face1: a1Img1,
       face2: a1Img1,
       face3: a1Img1,
@@ -259,7 +264,7 @@ const Gallery = ({ dataGallery }) => {
     },
     {
       id: 2,
-      title: "",
+      title: "https://bubble-effect.vercel.app/",
       face1: a2Img1,
       face2: a2Img2,
       face3: a2Img3,
@@ -268,7 +273,7 @@ const Gallery = ({ dataGallery }) => {
     },
     {
       id: 3,
-      title: "",
+      title: "https://rocket-animation-five.vercel.app/",
       face1: a3Img1,
       face2: a3Img2,
       face3: a3Img3,
@@ -277,7 +282,7 @@ const Gallery = ({ dataGallery }) => {
     },
     {
       id: 4,
-      title: "",
+      title: "https://3d-house-nine.vercel.app/",
       face1: a4Img1,
       face2: a4Img2,
       face3: a4Img3,
@@ -286,7 +291,7 @@ const Gallery = ({ dataGallery }) => {
     },
     {
       id: 5,
-      title: "",
+      title: "https://3d-watch-yhethi.vercel.app/",
       face1: a5Img1,
       face2: a5Img2,
       face3: a5Img2,
@@ -821,7 +826,7 @@ const Gallery = ({ dataGallery }) => {
                   alignItems: "center",
                 }}
               >
-                <p>{titleImg}</p>
+                {titleImg.length > 0 && <p>{titleImg}</p>}
               </NavLink>
             </>
           ) : (
@@ -833,7 +838,23 @@ const Gallery = ({ dataGallery }) => {
                 controls
                 autoPlay
               ></video>
-              <p>{titleImg}</p>
+              <NavLink
+                className="navbar-item"
+                activeClassName="is-active"
+                to={titleImg}
+                target="_blank"
+                exact
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  width: "100%",
+                  height: "100%",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                {titleImg.length > 0 && <p>{titleImg}</p>}
+              </NavLink>
             </>
           )}
         </div>

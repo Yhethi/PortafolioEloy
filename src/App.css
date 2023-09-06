@@ -323,7 +323,7 @@
   padding: 90px 10% 5% 10%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   transform: scale(0);
 }
 
@@ -354,6 +354,10 @@
   color: white;
   font-size: 40px;
   cursor: pointer;
+  transition-duration: 0.2s;
+}
+.closeGallery:hover {
+  transform: scale(1.1);
 }
 
 .imgGallery {
@@ -371,7 +375,11 @@
 
 @media (max-width: 732px) {
   .contenedor3d {
+    /* height: 100vh; */
+    /* overflow: hidden; */
+  }
+  .allGallery {
     height: 100vh;
-    overflow: hidden;
+    overflow-y: scroll !important;
   }
 }

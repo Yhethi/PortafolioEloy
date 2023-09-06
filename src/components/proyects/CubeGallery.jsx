@@ -79,6 +79,11 @@ const CubeGallery = ({ datosApi, imgPreview, isVideo }) => {
                 onClick={(e) => {
                   imgPreview(e, 1);
                 }}
+                onLoad={(e) => {
+                  setTimeout(() => {
+                    e.target.click();
+                  }, 1000);
+                }}
               />
             </>
           ) : (
@@ -93,7 +98,6 @@ const CubeGallery = ({ datosApi, imgPreview, isVideo }) => {
                 }}
                 onLoad={(e) => {
                   setTimeout(() => {
-                    // console.log("e",e);
                     e.target.click();
                   }, 1000);
                 }}
