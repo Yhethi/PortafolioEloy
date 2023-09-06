@@ -4,34 +4,17 @@ import vidrioN1 from "./../../assets/img/vidrioN1.png";
 import vidrio1 from "./../../assets/img/vidrio1.png";
 import Gallery from "../proyects/Gallery";
 
+import marDown from "./../../assets/img/proyects/marDown.jpg";
+import marUp from "./../../assets/img/proyects/marUp.png";
+import ufo from "./../../assets/img/proyects/ufo.png";
+
+import "./proyects.css";
+
 const Proyects = ({ enableSquareProyects, changeData, setVidrioClicked }) => {
   const [dataGallery, setDataGallery] = useState(0);
 
   useEffect(() => {
-    const vidrio1 = document.getElementById("vidrio1");
-    const vidrioN1 = document.getElementById("vidrioN1");
-    const vidrio = document.getElementById("vidrio");
-
-    vidrio1.addEventListener("click", () => {
-      vidrio1.classList.remove("vidrio1Roto");
-      vidrio1.classList.add("shain");
-      setTimeout(() => {
-        vidrio1.style.filter = "opacity(0)";
-        vidrioN1.style.filter = "opacity(0)";
-        vidrio.style.filter = "opacity(1)";
-        vidrio.classList.add("shain2");
-        enableSquareProyects();
-        setVidrioClicked(true);
-      }, 2000);
-    });
-
-    // const squareProyects = document.querySelectorAll(".squareProyects");
-    // squareProyects.forEach((item) => {
-    //   item.addEventListener("click", () => {
-    //     console.log(item.dataset.menu);
-    //     setDataGallery(item.dataset.menu);
-    //   });
-    // });
+    setVidrioClicked(true);
   }, []);
 
   const openGallery = (e) => {
@@ -43,15 +26,12 @@ const Proyects = ({ enableSquareProyects, changeData, setVidrioClicked }) => {
 
   return (
     <div className="cara" id="cara3">
-      <div className="content_vidrios">
-        <img src={vidrio} alt={vidrio} className="vidrios" id="vidrio" />
-        <img src={vidrioN1} alt={vidrioN1} className="vidrios" id="vidrioN1" />
-        <img
-          src={vidrio1}
-          alt={vidrio1}
-          className="vidrios vidrio1Roto"
-          id="vidrio1"
-        />
+      <div className="dinamicImage">
+        <img id="marDown" src={marDown} alt={marDown} />
+        <div className="ufo">
+          <img id="ufo" src={ufo} alt={ufo} />
+        </div>
+        <img id="marUp" src={marUp} alt={marUp} />
       </div>
 
       <Gallery dataGallery={dataGallery} />
@@ -64,7 +44,7 @@ const Proyects = ({ enableSquareProyects, changeData, setVidrioClicked }) => {
           }}
           data-menu="0"
         >
-          <h1>Diseño Web</h1>
+          <h1>Web Designs</h1>
         </div>
         <div
           className="squareProyects"
@@ -74,7 +54,7 @@ const Proyects = ({ enableSquareProyects, changeData, setVidrioClicked }) => {
           }}
           data-menu="1"
         >
-          <h1>Animaciones Web</h1>
+          <h1>Web Animations</h1>
         </div>
         <div
           className="squareProyects"
@@ -84,7 +64,8 @@ const Proyects = ({ enableSquareProyects, changeData, setVidrioClicked }) => {
           }}
           data-menu="2"
         >
-          <h1>Edición de Videos</h1>
+          <h1>???</h1>
+          {/* <h1>Edición de Videos</h1> */}
         </div>
         <div
           className="squareProyects"
@@ -94,7 +75,8 @@ const Proyects = ({ enableSquareProyects, changeData, setVidrioClicked }) => {
           }}
           data-menu="3"
         >
-          <h1>Imagenes Publicitarias</h1>
+          <h1>???</h1>
+          {/* <h1>Imagenes Publicitarias</h1> */}
         </div>
         <div
           className="squareProyects"
@@ -104,7 +86,8 @@ const Proyects = ({ enableSquareProyects, changeData, setVidrioClicked }) => {
           }}
           data-menu="4"
         >
-          <h1>Traducción</h1>
+          <h1>???</h1>
+          {/* <h1>Traducción</h1> */}
         </div>
       </div>
     </div>

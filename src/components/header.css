@@ -124,3 +124,6 @@
 .logo h1 {
   font-size: 1.3rem;
 }
+.content_header li a {
+  text-align: center;
+}

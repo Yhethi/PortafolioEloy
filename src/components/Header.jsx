@@ -2,7 +2,7 @@ import React from "react";
 import "./header.css";
 import { TbMenu2 } from "react-icons/tb";
 
-const Header = ({ setChangeData, openMenu, isOpen }) => {
+const Header = ({ setChangeData, openMenu, isOpen, setIsOpen }) => {
   return (
     <div className="content_header">
       <div className="left">
@@ -21,6 +21,8 @@ const Header = ({ setChangeData, openMenu, isOpen }) => {
               href="#inicio"
               onClick={() => {
                 setChangeData(0);
+                setIsOpen(false);
+                openMenu();
               }}
             >
               INICIO
@@ -32,6 +34,8 @@ const Header = ({ setChangeData, openMenu, isOpen }) => {
               href="#aboutme"
               onClick={() => {
                 setChangeData(1);
+                setIsOpen(false);
+                openMenu();
               }}
             >
               ABOUT ME
@@ -43,6 +47,8 @@ const Header = ({ setChangeData, openMenu, isOpen }) => {
               href="#proyects"
               onClick={() => {
                 setChangeData(2);
+                setIsOpen(false);
+                openMenu();
               }}
             >
               PROYECTS
@@ -54,6 +60,8 @@ const Header = ({ setChangeData, openMenu, isOpen }) => {
               href="#contactme"
               onClick={() => {
                 setChangeData(3);
+                setIsOpen(false);
+                openMenu();
               }}
             >
               CONTACT ME

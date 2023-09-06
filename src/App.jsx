@@ -144,6 +144,7 @@ function App() {
         setChangeData={setChangeData}
         openMenu={openMenu}
         isOpen={isOpen}
+        setIsOpen={setIsOpen}
       />
       <div className="contenedor3d">
         <div className="cubo" id="cubo">

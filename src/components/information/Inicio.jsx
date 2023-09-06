@@ -32,17 +32,17 @@ const Inicio = ({ setChangeData }) => {
       textForest.style.transform = "scale(0)";
       setTimeout(() => {
         textForest.style.transform = "scale(1)";
-        textForest.textContent = "Los mejores diseños para tu web";
+        textForest.textContent = "The best designs for your website";
         setTimeout(() => {
           textForest.style.transform = "scale(0)";
           setTimeout(() => {
             textForest.style.transform = "scale(1)";
-            textForest.textContent = "Crea la pagina que desees";
+            textForest.textContent = "Create the page you want";
             setTimeout(() => {
               textForest.style.transform = "scale(0)";
               setTimeout(() => {
                 textForest.style.transform = "scale(1)";
-                textForest.textContent = "Obtén las mejores animaciones";
+                textForest.textContent = "Get the best animations";
                 setTimeout(() => {
                   changeTextForest();
                 }, 2000);
@@ -112,7 +112,7 @@ const Inicio = ({ setChangeData }) => {
             </div>
           </div>
           <div className="squareInicio" id="inicio2">
-            <h1>Soluciones a tu pagina WEB rapido y sencillo</h1>
+            <h1>Solutions to your web page fast and simple</h1>
             <p>React, Laravel, PHP, JavaScript</p>
             <a
               id="bAboutme"
@@ -121,7 +121,7 @@ const Inicio = ({ setChangeData }) => {
                 setChangeData(1);
               }}
             >
-              SOBRE MI
+              ABOUT ME
             </a>
             <div className="codeImgs">
               <img id="react" src={react} alt={react} />
@@ -136,7 +136,7 @@ const Inicio = ({ setChangeData }) => {
         </div>
         <div className="inicio3y4y5">
           <div className="squareInicio" id="inicio3">
-            <h1 id="textForest">Obtén las mejores animaciones</h1>
+            <h1 id="textForest">Get the best animations</h1>
             <div className="petalosCayendo"></div>
           </div>
           <div className="squareInicio" id="inicio4">
