@@ -27,6 +27,7 @@ const Inicio = ({ setChangeData }) => {
   const changeTextForest = () => {
     const textForest = document.getElementById("textForest");
     textForest.style.transitionDuration = "2s";
+    textForest.style.textAlign = "center";
 
     setTimeout(() => {
       textForest.style.transform = "scale(0)";

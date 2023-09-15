@@ -13,6 +13,24 @@ function App() {
   const [changeData, setChangeData] = useState(0);
   const [vidrioClicked, setVidrioClicked] = useState(false);
 
+  useEffect(() => {
+    const es_instagram = navigator.userAgent.toLowerCase().indexOf("instagram");
+    if (es_instagram > -1) {
+      alert(
+        "Para una mejor experiencia, por favor inicia este portafolio en un navegador diferente"
+      );
+      let valor = confirm("Deseas cerrar este navegador de instagram?");
+      if (valor) {
+        alert("Gracias por su visita :)");
+        window.close();
+      } else {
+        alert(
+          "Puedes presiona `Abrir en Chrome` en los 3 puntos que se encuentran en la parte superior izquierda de este navegador."
+        );
+      }
+    }
+  }, []);
+
   const enableSquareInicio = () => {
     const squareInicio = document.querySelectorAll(".squareInicio");
     const c_white = document.querySelector(".contenedor_white");

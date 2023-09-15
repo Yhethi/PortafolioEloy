@@ -1,3 +1,6 @@
+v1.101
+Navegador de Instagram con alerta para no iniciar el portafolio 
+
 v1.10
 Fix de galeria mobil, click bugs en las imagenes del cubo y el link del url
 
