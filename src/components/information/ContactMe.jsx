@@ -70,7 +70,7 @@ const ContactMe = () => {
           <NavLink
             className="navbar-item"
             activeClassName="is-active"
-            to="/"
+            to="mailto:eloyjosebonillag@gmail.com?Subject=Buen%20dia%20Eloy%20quiero%20conversar%20contigo%20para%20un%20proyecto%20web!."
             exact
             target="_blank"
             style={{
@@ -83,8 +83,7 @@ const ContactMe = () => {
             }}
           >
             <p style={{ textAlign: "center" }}>
-              GMAIL<br></br>
-              eloyjosebonillag@gmail.com
+              GMAIL
             </p>
             <img src={gmail} alt={gmail} />
           </NavLink>

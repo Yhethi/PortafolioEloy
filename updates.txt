@@ -1,3 +1,6 @@
+v1.08
+Centradas las caras de las vistas y añadido mailto para que se vaya directamente al correo al momento de contacto
+
 v1.07
 Fix links de los proyectos y el video es responsive en mobile
 

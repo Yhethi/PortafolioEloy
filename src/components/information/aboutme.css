@@ -292,3 +292,13 @@ p {
   animation: girar 4s infinite linear;
   scale: 1.2;
 }
+
+@media (max-width: 732px) {
+  #cara2 {
+    width: 102vw;
+    margin-left: 200px;
+  }
+  .contenedor_white_about {
+    width: 100vw !important;
+  }
+}

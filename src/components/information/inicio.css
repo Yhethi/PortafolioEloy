@@ -707,3 +707,13 @@
     transform: translateX(-50px) matrix(1, 0, -0.5, 1, 60, -90);
   }
 }
+
+@media (max-width: 732px) {
+  #cara1 {
+    width: 102vw;
+    margin-left: -13px;
+  }
+  .contenedor_white {
+    width: 100vw !important;
+  }
+}
