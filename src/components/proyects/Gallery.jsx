@@ -821,12 +821,20 @@ const Gallery = ({ dataGallery }) => {
                   display: "flex",
                   flexDirection: "column",
                   width: "100%",
-                  height: "100%",
                   // justifyContent: "center",
                   alignItems: "center",
+                  marginTop: "150px",
                 }}
               >
-                {titleImg.length > 0 && <p>{titleImg}</p>}
+                {titleImg.length > 0 && (
+                  <p
+                    style={{
+                      marginTop: "-110px",
+                    }}
+                  >
+                    {titleImg}
+                  </p>
+                )}
               </NavLink>
             </>
           ) : (
@@ -848,9 +856,10 @@ const Gallery = ({ dataGallery }) => {
                   display: "flex",
                   flexDirection: "column",
                   width: "100%",
-                  height: "100%",
-                  // justifyContent: "center",
+                  justifyContent: "center",
                   alignItems: "center",
+                  // transform: "translateY(110px)",
+                  marginTop: "110px",
                 }}
               >
                 {titleImg.length > 0 && <p>{titleImg}</p>}

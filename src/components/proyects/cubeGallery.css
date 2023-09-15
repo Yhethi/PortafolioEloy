@@ -44,6 +44,7 @@
 @media (max-width: 732px) {
   .content_cubeGallery {
     transform: translateY(400px) !important;
+    z-index: 10;
   }
 }
 .content_cubeGallery {
@@ -87,12 +88,20 @@
   font-size: 40px;
 }
 @media (max-width: 732px) {
+  .imgPreview {
+    height: 500px !important;
+    transform: scale(1) translateY(-100px) !important;
+  }
+
   .imgPreview p {
     color: white;
     font-size: 1.2rem !important;
+    transform: scale(1) translateY(-110px) translateX(0px) !important;
   }
   video {
-    width: 100vw;
+    width: 90vw;
+    height: 250px;
+    transform: translateX(10px);
   }
 }
 .imgPreview a {

@@ -82,9 +82,7 @@ const ContactMe = () => {
               alignItems: "center",
             }}
           >
-            <p style={{ textAlign: "center" }}>
-              GMAIL
-            </p>
+            <p style={{ textAlign: "center" }}>GMAIL</p>
             <img src={gmail} alt={gmail} />
           </NavLink>
         </div>
