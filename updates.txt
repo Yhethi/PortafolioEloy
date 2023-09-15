@@ -1,3 +1,6 @@
+v1.09
+Centrado de imagenes y videos en mis proyectos
+
 v1.08
 Centradas las caras de las vistas y añadido mailto para que se vaya directamente al correo al momento de contacto
 

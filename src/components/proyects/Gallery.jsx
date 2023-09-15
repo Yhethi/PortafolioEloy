@@ -103,14 +103,14 @@ const Gallery = ({ dataGallery }) => {
 
       imgPreview.style.transitionDuration = "0 !important";
       imgPreview.style.transform =
-        "scale(0) translateX(200px) translateY(-170px)";
+        "scale(0) translateX(200px) translateY(-250px)";
       imgPreview.style.width = "0";
       imgPreview.style.height = "0";
 
       setTimeout(() => {
         imgPreview.style.transitionDuration = "1s";
         imgPreview.style.transform =
-          "scale(1) translateX(200px) translateY(-170px)";
+          "scale(1) translateX(200px) translateY(-250px)";
         imgPreview.style.width = "50%";
         imgPreview.style.height = "500px";
 
@@ -125,14 +125,14 @@ const Gallery = ({ dataGallery }) => {
       console.log("Entra aqui");
       imgPreview.style.transitionDuration = "0 !important";
       imgPreview.style.transform =
-        "scale(0) translateX(200px) translateY(-170px)";
+        "scale(0) translateX(200px) translateY(-250px)";
       imgPreview.style.width = "0";
       imgPreview.style.height = "0";
 
       setTimeout(() => {
         imgPreview.style.transitionDuration = "1s";
         imgPreview.style.transform =
-          "scale(1) translateX(200px) translateY(-170px)";
+          "scale(1) translateX(200px) translateY(-250px)";
         imgPreview.style.width = "50%";
         imgPreview.style.height = "500px";
         setIsVideo(false);
@@ -822,7 +822,7 @@ const Gallery = ({ dataGallery }) => {
                   flexDirection: "column",
                   width: "100%",
                   height: "100%",
-                  justifyContent: "center",
+                  // justifyContent: "center",
                   alignItems: "center",
                 }}
               >
@@ -849,7 +849,7 @@ const Gallery = ({ dataGallery }) => {
                   flexDirection: "column",
                   width: "100%",
                   height: "100%",
-                  justifyContent: "center",
+                  // justifyContent: "center",
                   alignItems: "center",
                 }}
               >
