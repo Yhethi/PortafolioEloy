@@ -489,6 +489,8 @@
 }
 
 #textforest {
+  width: 100%;
+  text-align: center;
   transition-duration: 2s;
 }
 #inicio4 {

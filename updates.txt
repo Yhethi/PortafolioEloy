@@ -1,3 +1,6 @@
+v1.102
+Centrado el texto en theForest del inicio en mobile
+
 v1.101
 Navegador de Instagram con alerta para no iniciar el portafolio 
 
