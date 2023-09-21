@@ -745,6 +745,11 @@ const Gallery = ({ dataGallery }) => {
   };
 
   const showCube = (id) => {
+    window.scroll({
+      top: 100,
+      left: 100,
+      behavior: "smooth",
+    });
     const cubeCenter = document.querySelector(".cubeCenter");
     const onlyCubeGallery = document.querySelector(".onlyCubeGallery");
     onlyCubeGallery.classList.add("subidaCube");

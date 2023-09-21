@@ -1,3 +1,6 @@
+v1.103
+Cambia foto en la parte del inicio
+
 v1.102
 Centrado el texto en theForest del inicio en mobile
 
